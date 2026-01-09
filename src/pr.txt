@@ -1,0 +1,42 @@
+<nav class="navbar navbar-expand-lg bg-light">
+        <a class="navbar-brand " href="#" style ="color: #e40046; font-size: 25px; font-weight: bold;" >VRNGO</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+       <br>
+       <br>
+       <br>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                
+
+              <a class="nav-link text" href="#" style =" color: #e40046; font-size: 20px; margin-left:220px; font"><i style ="margin-left:29px;" class="fa fa-user-circle-o " aria-hidden="true"></i><br> My Profile<span class="sr-only">(current)</span></a>
+            </li>
+            <br>
+            <br>
+			<br>
+            <li class="nav-item">
+                <a class="nav-link text" href="about.html" style =" color: #e40046; font-size: 20px;  margin-left:55px;"><i style ="margin-left:13px;" class="fa fa-pencil-square-o" aria-hidden="true"></i><br>Feed</a>
+            </li>
+			<br>
+            <br>
+            
+            <li class="nav-item">
+                <a class="nav-link text" href="about.html" style ="color: #e40046; font-size: 20px; margin-left:71px;"><i style ="margin-left:27px;"class="fa fa-handshake-o" aria-hidden="true"></i><br>Volunteers</a>
+            </li>
+			<br>
+            <br>
+         
+            <li class="nav-item">
+              <a class="nav-link  text" href="#" style =" color: #e40046; font-size: 20px; margin-left:56px;"><i style ="margin-left:16px;"class="fa fa-home" aria-hidden="true"></i><br>NGOs</a>
+            </li>
+        </ul>
+          
+
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline  my-2 my-sm-0" style = "color : white; background-color: #e40046 ;" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
