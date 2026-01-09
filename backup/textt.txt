@@ -1,0 +1,23 @@
+<form class="form-inline my-2 my-lg-0 mr-3" method="POST"
+				action="login.jsp">
+
+				<button class="btn btn-outline-success my-2 my-sm-0">LOGIN</button>
+			</form>
+			<form class="form-inline my-2 my-lg-0 mr-3" method="POST"
+				action="register.jsp">
+
+				<button class="btn btn-outline-success my-2 my-sm-0">REGISTER</button>
+			</form>
+
+
+<li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-success"  href="#" id="navbarDropdown" role="button" style ="font-size: 20px;"data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                login
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item text-success" href="login.jsp" >Login</a>
+               
+                <div class="dropdown-divider"></div>
+                 <a class="dropdown-item text-success" href="register.jsp" >Register</a>
+              </div>
+            </li>

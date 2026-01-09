@@ -1,0 +1,48 @@
+<script>
+    var msg=null;
+    //document.write("ok");
+    function login(){
+    	if($('#userName').val()==""){
+    		$('#userName').parent('td').addClass('has-error');
+    		return false;
+    	}
+    	else if($('#password').val()==""){
+    		$('#password').parent('td').addClass('has-error');
+    		return false;
+    	}
+    	var data= $("#frm-login").serialize();
+    	
+    	//document.write("ok2");
+    	
+    	$.ajax({
+    		type :"POST",
+    		url :"validatelogin",
+    		data : data,
+    		dataType: "text json",
+    		
+    		
+    		complete:function(data){
+    			alert(data);
+    			msg=data[0].msg;
+    			
+    			
+    			if(msg=='1'){
+    				window.location.replace("profileV.jsp");
+    				
+    			}
+    			else if(msg=='3'){
+    				$('#err').hide().html("username or password do not match!").fadeIn('slow');
+    				
+    				
+    			}
+    			
+    			
+    		}
+    	});
+    }
+    		
+    </script>
+    		
+    	});
+    }
+    </script>

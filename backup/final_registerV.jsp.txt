@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Register Volunteer</title>
+        
+        <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="homepage.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@300&display=swap" rel="stylesheet">
+
+  
+    </head>
+    <body>
+      <nav class="navbar navbar-expand-lg bg-light">
+        <a class="navbar-brand text-success" href="#" style ="font-size: 25px; font-weight: bold;" >VRNGO</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+       <br>
+       <br>
+       <br>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                
+
+              <a class="nav-link text-success" href="index.jsp" style ="font-size: 20px;">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <br>
+            <li class="nav-item">
+                <a class="nav-link text-success" href="about.html" style ="font-size: 20px;">About</a>
+            </li>
+            <br>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-success"  href="#" id="navbarDropdown" role="button" style ="font-size: 20px;"data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item text-success" href="#" >Action</a>
+                <a class="dropdown-item text-success" href="#" >Another action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item text-success" href="#">Something else here</a>
+              </div>
+            </li>
+            <br>
+            <li class="nav-item">
+              <a class="nav-link disabled text-success" href="#" style ="font-size: 20px;">Disabled</a>
+            </li>
+        </ul>
+          
+
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
+   <section class="my-5">
+       <div class="container">
+       <div class="py-5">
+           <h2 class="text-center text-success " style="font-family: 'Roboto', sans-serif;">Registration For Volunteers</h2>
+       </div>
+       <div class="w-50 m-auto">
+           <form action="RegisterVservlet.do" method="POST" onsubmit="return validation()" enctype="multipart/form-data"
+           >
+           <div class="form-group">
+                <label>First Name :</label>
+                <input type="text" name="fName" autocomplete="off" class="form-control" id="fName">
+                <span id = "name1" class ="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label>Last Name :</label>
+                <input type="text" name="lName" autocomplete="off" class="form-control" id="lName">
+                <span id = "name2" class ="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label>Username :</label>
+                <input type="text" name="userName" autocomplete="off" class="form-control" id="username">
+                <span id = "user" class ="text-danger"></span>
+            </div>
+            
+            <div class="form-group">
+                <label>Address:</label>
+                <input type="text" name="address" autocomplete="off" class="form-control" id="location">
+                <span id = "loc" class ="text-danger"></span>
+            </div>
+            
+            <div class="form-group">
+                <label>Contact:</label>
+                <input type="text" name="contact" autocomplete="off" class="form-control" id="contact">
+                <span id = "con" class ="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label>Email ID:</label>
+                <input type="text" name="email" autocomplete="off" class="form-control" id="email">
+                <span id = "em" class ="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label>Gender :</label>
+                <input type="radio"  style = "margin-left: 30px; " name ="gender"  value="male" checked> Male
+                <span  class ="checkmark"></span>
+                <input type="radio" style = "margin-left: 30px" name= "gender"  value="female"> Female
+                <span class ="checkmark"></span>
+            </div>
+
+
+          
+
+            <div class="form-group">
+                <label>Profile Picture:</label>
+              
+            </div>
+            <div class = "image-upload-wrap">
+                <input class = "file-upload-input " name="image" type="file" style =" background-color : lightgrey ;"  onchanges="readURL(this);" accept="image/*" />
+            </div>
+            <div class = "file-upload-content">
+                <img class = "file-upload-image"  />
+                <div class = "image-title-wrap"></div>
+            </div>
+
+
+           
+             <div class="form-group" >
+                <label> Educational level :</label>
+               <span id = "ed" class ="text-danger"></span>
+            </div>
+              <div class="dropdown">
+						<select name="education" class="btn btn-success dropdown-toggle"
+							style="background-color: lightgrey;" type="button"
+							id="dropdownMenuButton" data-toggle="dropdown"
+							aria-haspopup="true" aria-expanded="false">
+
+							<option value="school">School</option>
+							<option value="high school">High School</option>
+							<option value="graduate degree">Graduate Degree</option>
+							<option value="postgraduate degree">Post Graduate Degree</option>
+							<option value="other">other</option>
+						</select>
+
+
+					</div>
+              
+            
+           
+
+             <br>
+             <br>
+
+
+            <div class="form-group" >
+                <label> Contribution Details :</label>
+                <input type="text" name="contribution" placeholder ="About Donation, help possible from your side " autocomplete="off" class="form-control" 
+                id="desc" style = "height : 70px;">
+                <span id = "des" class ="text-danger"></span>
+            </div>
+           
+            <div class="form-group" >
+                <label> Distance willing to travel :</label>
+                <input type="text" name="distance" placeholder ="(in km)" autocomplete="off" class="form-control" 
+                id="dist" >
+                <span id = "dis" class ="text-danger"></span>
+            </div>
+
+
+            <div class="form-group">
+                <label>Password :</label>
+                <input type="text" name="password" autocomplete="off" class="form-control" id="password">
+                <span id = "pass" class ="text-danger"></span>
+            </div>
+        
+        <div class="form-group">
+            <label> Re-enter Password :</label>
+            <input type="text" name="password2" autocomplete="off" class="form-control" id="repassword">
+            <span id = "repass" class ="text-danger"></span>
+        </div>
+            <button type="submit" class="btn btn-success">Register</button>
+
+
+           </form>
+       </div>
+    </div>
+
+      
+   </section>
+   <script type="text/javascript">
+    function validation(){
+         var fname = document.getElementById('fName').value;
+         var lname = document.getElementById('lName').value;
+         var user = document.getElementById('username').value;
+         var loc = document.getElementById('location').value;
+         var con = document.getElementById('contact').value;
+         var em = document.getElementById('email').value;
+         var des = document.getElementById('desc').value;
+        var dis = document.getElementById('dist').value;
+         var pass = document.getElementById('password').value;
+         var repass = document.getElementById('repassword').value;
+     
+
+
+         if(fname == ""){
+             document.getElementById('name1').innerHTML="*Required field";
+             return false;
+         }
+         if(lname == ""){
+             document.getElementById('name2').innerHTML="*Required field";
+             return false;
+         }
+         if(user == ""){
+             document.getElementById('user').innerHTML="*Required field";
+             return false;
+         }
+         if(user.length < 6 ){
+           document.getElementById('user').innerHTML="*username must contain more than 5 characters"
+         }
+         if(user.length > 25){
+           document.getElementById('user').innerHTML="*username must contain lesser characters"
+         }
+         if(loc == ""){
+             document.getElementById('loc').innerHTML="*Required field";
+             return false;
+         }
+         if(loc.length < 10){
+             document.getElementById('loc').innerHTML="*Enter Full address";
+             return false;
+         }
+         if(con == ""){
+             document.getElementById('con').innerHTML="*Required field";
+             return false;
+         }
+         if(isNaN(con)){
+             document.getElementById('con').innerHTML="*Invalid phone number, enter digits only";
+             return false;
+         }
+         if(con.length != 10){
+             document.getElementById('con').innerHTML="*Invalid phone number, enter 10 digits only";
+             return false;
+         }
+         if(em == ""){
+             document.getElementById('em').innerHTML="*Required field";
+             return false;
+         }
+         if(em.indexOf('@') == 0){
+             document.getElementById('em').innerHTML="*Invalid ID";
+             return false;
+         }
+         if(!em.includes('@')){
+             document.getElementById('em').innerHTML="*Invalid ID";
+             return false;
+         }
+       
+             
+         if((em.length - em.charAt('.') + 1 ) > 3){
+             document.getElementById('em').innerHTML="*Invalid ID";
+             return false;
+         }
+         
+         if(des == ""){
+             document.getElementById('des').innerHTML="*Required field";
+             return false;
+         }
+          
+         if(des.length < 50){
+             document.getElementById('des').innerHTML="*Enter a detailed description";
+             return false;
+         }
+         
+         if(dis == ""){
+             document.getElementById('dis').innerHTML="*Required field";
+             return false;
+         }
+         if(NaN(dis)){
+             document.getElementById('dis').innerHTML="*Mention in digits only";
+             return false;
+         }
+         if(pass == ""){
+             document.getElementById('pass').innerHTML="*Required field";
+             return false;
+         }
+         if(pass.length < 8){
+             document.getElementById('pass').innerHTML="*Password must contain more characters";
+             return false;
+         }
+       
+         
+         if(repass == ""){
+             document.getElementById('repass').innerHTML="*Required field";
+             return false;
+         }
+         if(pass != repass){
+             document.getElementById('repass').innerHTML="*Passwords do not match";
+             return false;
+         }
+         
+       } 
+  </script>
+
+
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+ 
+  </body>
+ 
+</html>
